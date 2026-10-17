@@ -125,6 +125,7 @@ Le compte rendu dit clairement ce qui a été fait, ce qui n'a pas pu l'être, e
 - Description en français, selon le modèle `.github/pull_request_template.md`, avec `Closes #N`.
 - Chaque PR est relue par un agent Claude dédié à la review avant la fusion.
 - La fusion se fait en squash and merge, **uniquement par le développeur, jamais par Claude**.
+- La branche est supprimée automatiquement après la fusion.
 - Les commits de Claude se terminent par la mention `Co-Authored-By`, ses PR par « Generated with Claude Code ».
 
 ## 11. Communication
