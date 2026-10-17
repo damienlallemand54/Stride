@@ -103,13 +103,37 @@ Le compte rendu dit clairement ce qui a été fait, ce qui n'a pas pu l'être, e
 - [docs/SPEC.md](docs/SPEC.md) décrit les fonctionnalités, et les issues suivent le travail. Une issue renvoie à la
   section de la spec qu'elle concerne, sans recopier son contenu.
 
-## 10. Communication
+## 10. Git et pull requests
+
+### Branches
+
+- Une branche par issue, pour une petite tâche : quelques heures de travail, 2 ou 3 commits.
+- Format : `<type>/<numéro d'issue>-<scope>-<description>`, en minuscules, avec des tirets, en anglais.
+  Exemples : `feature/12-api-create-session`, `docs/1-functional-spec`.
+- Types : `feature`, `fix`, `refactor`, `docs`, `chore`.
+- Scope : la partie du monorepo touchée (`api`, `web`, `shared`, plus tard `mobile`).
+  Pas de scope quand le changement n'en concerne aucune.
+- Les commits intermédiaires d'une branche n'ont pas de format imposé.
+
+### Pull requests
+
+- `main` est protégée : tout changement passe par une PR, sans exception.
+- Une PR reste minime : une brique à la fois.
+- Titre en anglais, au format Conventional Commits, avec le type (`feat` pour une branche `feature`)
+  et le scope de la branche : `feat(api): add session creation`, `docs: add functional spec`.
+  Avec le squash, ce titre devient le commit sur `main`.
+- Description en français, selon le modèle `.github/pull_request_template.md`, avec `Closes #N`.
+- Chaque PR est relue par un agent Claude dédié à la review avant la fusion.
+- La fusion se fait en squash and merge, **uniquement par le développeur, jamais par Claude**.
+- Les commits de Claude se terminent par la mention `Co-Authored-By`, ses PR par « Generated with Claude Code ».
+
+## 11. Communication
 
 - Discussions et documentation en français.
 - Code (identifiants, commentaires) et messages de commit en anglais.
 - Comptes rendus courts : ce qui a changé, où, et ce qui demande une action du développeur.
 - Un échec (build, test, commande) est rapporté tel quel, avec la sortie utile. Jamais minimisé.
 
-## 11. Commandes
+## 12. Commandes
 
 > À compléter une fois l'ossature du projet en place.
