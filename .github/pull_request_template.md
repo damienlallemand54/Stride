@@ -4,6 +4,8 @@
 
 Closes #
 
+## Reste à faire ou à décider
+
 ## Définition de « terminé »
 
 - [ ] Compile sans warning

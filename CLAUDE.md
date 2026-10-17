@@ -112,7 +112,7 @@ Le compte rendu dit clairement ce qui a été fait, ce qui n'a pas pu l'être, e
   Exemples : `feature/12-api-create-session`, `docs/1-functional-spec`.
 - Types : `feature`, `fix`, `refactor`, `docs`, `chore`.
 - Scope : la partie du monorepo touchée (`api`, `web`, `shared`, plus tard `mobile`).
-  Pas de scope quand le changement n'en concerne aucune.
+  Pas de scope quand le changement n'en concerne aucune, ou en concerne plusieurs.
 - Les commits intermédiaires d'une branche n'ont pas de format imposé.
 
 ### Pull requests
